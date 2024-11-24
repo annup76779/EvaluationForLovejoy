@@ -29,8 +29,9 @@
                 {% endfor %}
             </div>
             <div class="mb-3">
-                <label for="password1" class="form-label">Password</label>
+                <label for="id_password1" class="form-label">Password</label>
                 {{ form.password1 }}
+                <small id="password-help"></small>
                 {% for error in form.password1.errors %}
                     <div class="text-danger">{{ error }}</div>
                 {% endfor %}
@@ -46,4 +47,41 @@
         </form>
     </div>
 </div>
+{% endblock %}
+{% block extra_javascript %}
+<script>
+    const passwordInput = document.getElementById('id_password1');
+    const passwordHelp = document.getElementById('password-help');
+
+    passwordInput.addEventListener('input', () => {
+        const password = passwordInput.value;
+        let strength = 0;
+
+        // Check criteria
+        if (password.match(/[A-Z]/)) strength++;
+        if (password.match(/[a-z]/)) strength++;
+        if (password.match(/[0-9]/)) strength++;
+        if (password.match(/[!@#$%^&*(),.?":{}|<>]/)) strength++;
+        if (password.length >= 8) strength++;
+
+        // Display feedback
+        switch (strength) {
+            case 0:
+            case 1:
+                passwordHelp.innerText = "Weak password.";
+                passwordHelp.style.color = "red";
+                break;
+            case 2:
+            case 3:
+                passwordHelp.innerText = "Moderate password.";
+                passwordHelp.style.color = "orange";
+                break;
+            case 4:
+            case 5:
+                passwordHelp.innerText = "Strong password.";
+                passwordHelp.style.color = "green";
+                break;
+        }
+    });
+</script>
 {% endblock %}

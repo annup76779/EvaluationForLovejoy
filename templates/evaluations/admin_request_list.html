@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Evaluation Requests</h2>
+
+    <!-- Filters -->
+    <form method="get" class="mb-3">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" name="q" value="{{ request.GET.q }}" class="form-control" placeholder="Search comments...">
+            </div>
+            <div class="col-md-3">
+                <input type="date" name="start_date" value="{{ request.GET.start_date }}" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <input type="date" name="end_date" value="{{ request.GET.end_date }}" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <input type="text" name="user" value="{{ request.GET.user }}" class="form-control" placeholder="Search by username...">
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary w-100">Filter</button>
+            </div>
+            <div class="col-md-3">
+                <a href="{% url 'admin_request_list' %}" class="btn btn-secondary w-100">Reset Filters</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Table -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Comment</th>
+                <th>Contact Preference</th>
+                <th>Photo</th>
+                <th>Submitted On</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for evaluation in evaluations %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ evaluation.user.username }}</td>
+                    <td>{{ evaluation.comment }}</td>
+                    <td>{{ evaluation.contact_preference }}</td>
+                    <td>
+                        {% if evaluation.photo %}
+                            <a href="{{ evaluation.photo.url }}" target="_blank">View Photo</a>
+                        {% else %}
+                            No Photo
+                        {% endif %}
+                    </td>
+                    <td>{{ evaluation.created_at }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6" class="text-center">No evaluation requests found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <nav>
+        <ul class="pagination justify-content-center">
+            {% if evaluations.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}
+                    {% if request.GET.start_date %}start_date={{ request.GET.start_date }}&{% endif %}
+                    {% if request.GET.end_date %}end_date={{ request.GET.end_date }}&{% endif %}
+                    {% if request.GET.user %}user={{ request.GET.user }}&{% endif %}
+                    page={{ evaluations.previous_page_number }}">Previous</a>
+                </li>
+            {% endif %}
+            <li class="page-item disabled"><span class="page-link">Page {{ evaluations.number }} of {{ evaluations.paginator.num_pages }}</span></li>
+            {% if evaluations.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}
+                    {% if request.GET.start_date %}start_date={{ request.GET.start_date }}&{% endif %}
+                    {% if request.GET.end_date %}end_date={{ request.GET.end_date }}&{% endif %}
+                    {% if request.GET.user %}user={{ request.GET.user }}&{% endif %}
+                    page={{ evaluations.next_page_number }}">Next</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endblock %}
