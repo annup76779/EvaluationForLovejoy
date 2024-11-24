@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="alert alert-success mx-auto" style="max-width: 600px; margin-top: 50px;">
+    <h4 class="alert-heading">Request Submitted</h4>
+    <p>Your evaluation request has been submitted successfully. We’ll get back to you soon!</p>
+    <a href="{% url 'request_evaluation' %}" class="btn btn-primary">Go Back</a>
+</div>
+{% endblock %}
