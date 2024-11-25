@@ -26,7 +26,7 @@ class EvaluationRequest(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     comment = models.TextField()
     contact_preference = models.CharField(choices=[('phone', 'Phone'), ('email', 'Email')], max_length=10)
-    photo = models.ImageField(upload_to='uploads/')
+    photo = models.ImageField(upload_to=upload_to)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):

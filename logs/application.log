@@ -1,2 +1,246 @@
 INFO 2024-11-25 01:34:25,026 autoreload Watching for file changes with StatReloader
 INFO 2024-11-25 01:34:29,999 basehttp "GET /users/password-reset-done/ HTTP/1.1" 200 2178
+INFO 2024-11-25 14:29:08,977 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-25 14:29:23,960 basehttp "GET / HTTP/1.1" 404 2470
+WARNING 2024-11-25 14:29:24,170 basehttp "GET /favicon.ico HTTP/1.1" 404 2521
+INFO 2024-11-25 14:31:24,796 autoreload E:\Projects\lovejoy_antique\lovejoy_antique\urls.py changed, reloading.
+INFO 2024-11-25 14:31:25,537 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:32:09,233 autoreload E:\Projects\lovejoy_antique\lovejoy_antique\urls.py changed, reloading.
+INFO 2024-11-25 14:32:10,124 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:32:44,376 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-11-25 14:32:44,381 basehttp "GET /evaluations/request/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:32:44,400 basehttp "GET /users/login/?next=/evaluations/request/ HTTP/1.1" 200 2759
+ERROR 2024-11-25 14:32:56,254 log Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: axes_accessattempt
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\contrib\auth\views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\views\generic\edit.py", line 150, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\forms\forms.py", line 326, in full_clean
+    self._clean_form()
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\forms\forms.py", line 342, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\contrib\auth\forms.py", line 356, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 79, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\axes\helpers.py", line 617, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\axes\backends.py", line 52, in authenticate
+    if AxesProxyHandler.is_allowed(request, credentials):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\axes\handlers\proxy.py", line 108, in is_allowed
+    return cls.get_implementation().is_allowed(request, credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\axes\handlers\base.py", line 94, in is_allowed
+    if self.is_locked(request, credentials):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\axes\handlers\base.py", line 132, in is_locked
+    return self.get_failures(  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\axes\handlers\database.py", line 108, in get_failures
+    attempt_count = max(
+                    ^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\axes\handlers\database.py", line 110, in <genexpr>
+    attempts.aggregate(Sum("failures_since_start"))[
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\models\query.py", line 604, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\models\sql\query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\lovejoy_antique\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: axes_accessattempt
+ERROR 2024-11-25 14:32:56,268 basehttp "POST /users/login/?next=/evaluations/request/ HTTP/1.1" 500 252324
+INFO 2024-11-25 14:33:20,241 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-25 14:33:56,084 signals Failed login attempt for username: annup76779 from IP: 127.0.0.1
+INFO 2024-11-25 14:33:56,110 basehttp "POST /users/login/?next=/evaluations/request/ HTTP/1.1" 200 3051
+INFO 2024-11-25 14:34:05,838 basehttp "POST /users/login/?next=/evaluations/request/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:34:05,867 basehttp "GET /evaluations/request/ HTTP/1.1" 200 2960
+INFO 2024-11-25 14:34:13,022 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:34:13,032 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+WARNING 2024-11-25 14:34:19,329 signals Failed login attempt for username: annup76779 from IP: 127.0.0.1
+INFO 2024-11-25 14:34:19,355 basehttp "POST /users/login/ HTTP/1.1" 200 3030
+WARNING 2024-11-25 14:34:23,831 signals Failed login attempt for username: alkjsdfk from IP: 127.0.0.1
+INFO 2024-11-25 14:34:23,854 basehttp "POST /users/login/ HTTP/1.1" 200 3030
+WARNING 2024-11-25 14:34:27,780 signals Failed login attempt for username: aksdjfkl from IP: 127.0.0.1
+INFO 2024-11-25 14:34:27,794 basehttp "POST /users/login/ HTTP/1.1" 200 3030
+WARNING 2024-11-25 14:34:32,316 signals Failed login attempt for username: lkasdjfkl asd from IP: 127.0.0.1
+WARNING 2024-11-25 14:34:32,331 basehttp "POST /users/login/ HTTP/1.1" 429 1786
+WARNING 2024-11-25 14:34:36,572 signals Failed login attempt for username: lkasdjfkl asd from IP: 127.0.0.1
+WARNING 2024-11-25 14:34:36,587 basehttp "POST /users/login/ HTTP/1.1" 429 1786
+WARNING 2024-11-25 14:34:37,927 signals Failed login attempt for username: lkasdjfkl asd from IP: 127.0.0.1
+WARNING 2024-11-25 14:34:37,948 basehttp "POST /users/login/ HTTP/1.1" 429 1786
+INFO 2024-11-25 14:34:39,653 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+WARNING 2024-11-25 14:34:43,147 signals Failed login attempt for username: lk asdjdk from IP: 127.0.0.1
+WARNING 2024-11-25 14:34:43,163 basehttp "POST /users/login/ HTTP/1.1" 429 1786
+INFO 2024-11-25 14:34:56,212 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+WARNING 2024-11-25 14:35:03,278 signals Failed login attempt for username: asd sj from IP: 127.0.0.1
+WARNING 2024-11-25 14:35:03,291 basehttp "POST /users/login/ HTTP/1.1" 429 1786
+INFO 2024-11-25 14:35:09,004 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+WARNING 2024-11-25 14:35:21,559 signals Failed login attempt for username: annup80613 from IP: 127.0.0.1
+WARNING 2024-11-25 14:35:21,578 basehttp "POST /users/login/ HTTP/1.1" 429 1786
+INFO 2024-11-25 14:37:25,404 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+WARNING 2024-11-25 14:37:33,189 signals Failed login attempt for username: annup80613 from IP: 127.0.0.1
+WARNING 2024-11-25 14:37:33,202 basehttp "POST /users/login/ HTTP/1.1" 429 1786
+INFO 2024-11-25 14:39:14,342 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:39:18,052 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-11-25 14:39:18,056 basehttp "GET /evaluations/request/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:39:18,067 basehttp "GET /users/login/?next=/evaluations/request/ HTTP/1.1" 200 2759
+WARNING 2024-11-25 14:39:28,398 signals Failed login attempt for username: annup80613 from IP: 127.0.0.1
+WARNING 2024-11-25 14:39:28,421 basehttp "POST /users/login/?next=/evaluations/request/ HTTP/1.1" 429 1786
+INFO 2024-11-25 14:39:57,660 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:40:09,032 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:40:12,158 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-11-25 14:40:12,166 basehttp "GET /evaluations/request/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:40:12,177 basehttp "GET /users/login/?next=/evaluations/request/ HTTP/1.1" 200 2759
+INFO 2024-11-25 14:40:15,326 basehttp "GET /users/register/ HTTP/1.1" 200 4698
+INFO 2024-11-25 14:40:46,266 basehttp "POST /users/register/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:40:46,271 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+WARNING 2024-11-25 14:40:55,064 signals Failed login attempt for username: annup76779 from IP: 127.0.0.1
+INFO 2024-11-25 14:40:55,077 basehttp "POST /users/login/ HTTP/1.1" 200 3030
+WARNING 2024-11-25 14:41:05,366 signals Failed login attempt for username: annup76779 from IP: 127.0.0.1
+INFO 2024-11-25 14:41:05,385 basehttp "POST /users/login/ HTTP/1.1" 200 3030
+INFO 2024-11-25 14:41:12,030 basehttp "GET /users/password-reset/ HTTP/1.1" 200 2307
+INFO 2024-11-25 14:41:15,682 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:41:15,693 basehttp "GET /users/password-reset-done/ HTTP/1.1" 200 2178
+WARNING 2024-11-25 14:41:31,314 basehttp "POST /users/password-reset-done/ HTTP/1.1" 405 0
+INFO 2024-11-25 14:41:35,099 basehttp "GET /users/password-reset-done/ HTTP/1.1" 200 2178
+INFO 2024-11-25 14:41:41,277 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+WARNING 2024-11-25 14:41:54,268 signals Failed login attempt for username: annup76779 from IP: 127.0.0.1
+INFO 2024-11-25 14:41:54,281 basehttp "POST /users/login/ HTTP/1.1" 200 3030
+INFO 2024-11-25 14:42:00,295 basehttp "GET /users/password-reset/ HTTP/1.1" 200 2307
+INFO 2024-11-25 14:42:03,326 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:42:03,334 basehttp "GET /users/password-reset-done/ HTTP/1.1" 200 2178
+INFO 2024-11-25 14:43:10,136 basehttp "GET /evaluations/request/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:43:10,141 basehttp "GET /users/login/?next=/evaluations/request/ HTTP/1.1" 200 2759
+WARNING 2024-11-25 14:43:15,425 signals Failed login attempt for username: annup76779 from IP: 127.0.0.1
+INFO 2024-11-25 14:43:15,434 basehttp "POST /users/login/?next=/evaluations/request/ HTTP/1.1" 200 3051
+INFO 2024-11-25 14:46:01,462 autoreload E:\Projects\lovejoy_antique\users\views.py changed, reloading.
+INFO 2024-11-25 14:46:02,219 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:46:21,241 autoreload E:\Projects\lovejoy_antique\users\views.py changed, reloading.
+INFO 2024-11-25 14:46:22,407 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-25 14:48:50,826 signals Failed login attempt for username: annup76779 from IP: 127.0.0.1
+WARNING 2024-11-25 14:48:50,867 basehttp "POST /users/login/?next=/evaluations/request/ HTTP/1.1" 429 1786
+INFO 2024-11-25 14:49:10,033 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:49:34,531 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:49:37,872 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+INFO 2024-11-25 14:49:40,766 basehttp "GET /users/register/ HTTP/1.1" 200 4698
+INFO 2024-11-25 14:50:24,923 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:51:59,171 basehttp "POST /users/register/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:51:59,204 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+INFO 2024-11-25 14:52:05,747 basehttp "GET /users/verify-email/MQ/ch1ymn-4585be961ba76252085cc1cab85959a9/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:52:05,755 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+WARNING 2024-11-25 14:52:18,841 signals Failed login attempt for username: annup76779 from IP: 127.0.0.1
+INFO 2024-11-25 14:52:18,882 basehttp "POST /users/login/ HTTP/1.1" 200 3030
+INFO 2024-11-25 14:52:23,347 basehttp "GET /users/verify-email/MQ/ch1ymn-4585be961ba76252085cc1cab85959a9/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:52:23,355 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+INFO 2024-11-25 14:52:31,598 basehttp "POST /users/login/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:52:31,627 basehttp "GET /evaluations/request/ HTTP/1.1" 200 2960
+INFO 2024-11-25 14:53:02,840 models File uploaded by user: annup76779, filename: CrwFindrERD.png
+INFO 2024-11-25 14:53:02,854 basehttp "POST /evaluations/request/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:53:02,865 basehttp "GET /evaluations/success/ HTTP/1.1" 200 1880
+INFO 2024-11-25 14:53:31,676 autoreload E:\Projects\lovejoy_antique\evaluations\models.py changed, reloading.
+INFO 2024-11-25 14:53:33,324 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 14:53:43,406 basehttp "GET /evaluations/request/ HTTP/1.1" 200 2960
+INFO 2024-11-25 14:53:52,277 models File uploaded by user: annup76779, filename: CrwFindrERD.png
+INFO 2024-11-25 14:53:52,295 basehttp "POST /evaluations/request/ HTTP/1.1" 302 0
+INFO 2024-11-25 14:53:52,311 basehttp "GET /evaluations/success/ HTTP/1.1" 200 1880
+INFO 2024-11-25 15:01:59,522 basehttp "GET /evaluations/request/ HTTP/1.1" 200 2960
+INFO 2024-11-25 15:02:01,979 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+INFO 2024-11-25 15:02:01,990 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+INFO 2024-11-25 15:02:10,918 basehttp "POST /users/login/ HTTP/1.1" 302 0
+INFO 2024-11-25 15:02:10,949 basehttp "GET /evaluations/request/ HTTP/1.1" 200 3176
+INFO 2024-11-25 15:02:18,301 basehttp "GET /evaluations/admin-requests/ HTTP/1.1" 200 4545
+INFO 2024-11-25 15:02:38,450 basehttp "GET /evaluations/admin-requests/?q=fj&start_date=&end_date=&user= HTTP/1.1" 200 4059
+WARNING 2024-11-25 15:02:44,761 basehttp "GET /media/uploads/CrwFindrERD_3PqYdUT.png HTTP/1.1" 404 2756
+INFO 2024-11-25 15:07:53,798 autoreload E:\Projects\lovejoy_antique\lovejoy_antique\urls.py changed, reloading.
+INFO 2024-11-25 15:07:55,587 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 15:08:15,185 autoreload E:\Projects\lovejoy_antique\lovejoy_antique\urls.py changed, reloading.
+INFO 2024-11-25 15:08:16,945 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 15:16:24,805 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 15:17:03,955 autoreload E:\Projects\lovejoy_antique\lovejoy_antique\urls.py changed, reloading.
+INFO 2024-11-25 15:17:05,354 autoreload Watching for file changes with StatReloader
+INFO 2024-11-25 15:17:18,273 basehttp "GET /media/uploads/CrwFindrERD_3PqYdUT.png HTTP/1.1" 200 234840
