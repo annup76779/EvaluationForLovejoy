@@ -244,3 +244,24 @@ INFO 2024-11-25 15:16:24,805 autoreload Watching for file changes with StatReloa
 INFO 2024-11-25 15:17:03,955 autoreload E:\Projects\lovejoy_antique\lovejoy_antique\urls.py changed, reloading.
 INFO 2024-11-25 15:17:05,354 autoreload Watching for file changes with StatReloader
 INFO 2024-11-25 15:17:18,273 basehttp "GET /media/uploads/CrwFindrERD_3PqYdUT.png HTTP/1.1" 200 234840
+INFO 2024-12-04 00:58:38,952 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 00:59:06,386 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 00:59:08,121 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-12-04 00:59:08,130 basehttp "GET /evaluations/request/ HTTP/1.1" 302 0
+INFO 2024-12-04 00:59:08,145 basehttp "GET /users/login/?next=/evaluations/request/ HTTP/1.1" 200 2759
+WARNING 2024-12-04 00:59:08,450 basehttp "GET /favicon.ico HTTP/1.1" 404 2847
+INFO 2024-12-04 00:59:12,722 basehttp "GET /users/register/ HTTP/1.1" 200 4698
+INFO 2024-12-04 00:59:15,467 basehttp "GET /users/login/?next=/evaluations/request/ HTTP/1.1" 200 2759
+INFO 2024-12-04 00:59:16,807 basehttp "GET /users/password-reset/ HTTP/1.1" 200 2307
+INFO 2024-12-04 00:59:20,509 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2024-12-04 00:59:20,527 basehttp "GET /users/password-reset-done/ HTTP/1.1" 200 2178
+WARNING 2024-12-04 00:59:25,735 basehttp "POST /users/password-reset-done/ HTTP/1.1" 405 0
+INFO 2024-12-04 00:59:41,720 basehttp "GET /users/login/?next=/evaluations/request/ HTTP/1.1" 200 2759
+INFO 2024-12-04 00:59:43,952 basehttp "GET /users/register/ HTTP/1.1" 200 4698
+INFO 2024-12-04 01:00:07,562 basehttp "POST /users/register/ HTTP/1.1" 302 0
+INFO 2024-12-04 01:00:07,569 basehttp "GET /users/login/ HTTP/1.1" 200 2738
+INFO 2024-12-04 01:05:24,231 autoreload E:\Projects\lovejoy_antique\users\views.py changed, reloading.
+INFO 2024-12-04 01:05:24,887 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 01:05:31,848 autoreload E:\Projects\lovejoy_antique\users\views.py changed, reloading.
+INFO 2024-12-04 01:05:32,813 autoreload Watching for file changes with StatReloader
+INFO 2024-12-04 01:06:06,353 autoreload Watching for file changes with StatReloader

@@ -39,7 +39,7 @@ class RegisterView(View):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': default_token_generator.make_token(user),
             })
-            send_mail(subject, message, 'noreply@lovejoyantique.com', [user.email])
+            send_mail(subject, '', 'noreply@lovejoyantique.com', [user.email], html_message=message)
 
             return redirect('login')
         return render(request, 'users/register.html', {'form': form})
